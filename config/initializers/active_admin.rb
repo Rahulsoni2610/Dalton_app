@@ -16,7 +16,7 @@ ActiveAdmin.setup do |config|
   #
   # Note: Aim for an image that's 21px high so it fits in the header.
   #
-  config.site_title_image = "favicon"
+  config.site_title_image = "dalton_logo1"
 
   # == Load Paths
   #
@@ -349,4 +349,5 @@ ActiveAdmin.setup do |config|
   # You can switch to using Webpacker here.
   #
   # config.use_webpacker = true
+  config.load_paths += [File.expand_path('lib/active_admin/arctic_admin', Rails.root)]
 end

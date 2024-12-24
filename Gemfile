@@ -71,3 +71,4 @@ end
 gem 'devise'
 gem 'activeadmin'
 gem 'sassc-rails'
+gem 'arctic_admin'
