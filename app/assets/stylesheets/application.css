@@ -14,3 +14,8 @@
  *= require_self
  *= stub 'active_admin'
  */
+
+
+body {
+  user-select: none;
+}

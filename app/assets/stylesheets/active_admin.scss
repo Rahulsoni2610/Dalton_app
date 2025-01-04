@@ -1,4 +1,5 @@
- $primary-color: #fdd835;
+$primary-color: #fdd835;
+$sidebar-width: 300px;
 // Sass variable overrides must be declared before loading up Active Admin's styles.
 //
 // To view the variables that Active Admin provides, take a look at
@@ -6,7 +7,6 @@
 // Active Admin source.
 //
 // For example, to change the sidebar width:
-// $sidebar-width: 242px;
 
 // Active Admin's got SASS!
 @import "arctic_admin/base";
@@ -33,4 +33,10 @@
 
 .header-item.tabs .menu_item.current a {
   background-color: #fdd835;
+}
+
+//footer
+
+.footer {
+  display: none;
 }

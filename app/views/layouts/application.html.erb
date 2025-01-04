@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dalton</title>
+    <title>Daltonn</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= favicon_link_tag 'favicon', type: 'image/png' %>
+    <%= favicon_link_tag '3.png', type: 'image/png' %>
 
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
   <body>
+    <%= render 'components/navbar' if user_signed_in? %>
+    <%= render 'components/flash_messages' %>
     <%= yield %>
   </body>
 </html>

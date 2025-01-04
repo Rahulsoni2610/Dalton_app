@@ -1,0 +1,13 @@
+<nav class="bg-yellow-500 p-5">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <a href="/" class="text-white text-3xl font-bold"><span class="text-black">D</span>altonn</a>
+
+    <div class="flex">
+      <% if user_signed_in? %>
+        <%= button_to(destroy_user_session_path, method: :delete) do %>
+          <i class="fa fa-sign-out" style="font-size: xx-large;" aria-hidden="true"></i>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</nav>

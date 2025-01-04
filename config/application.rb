@@ -15,6 +15,8 @@ module DaltonApp
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
     config.autoload_lib(ignore: %w(assets tasks))
+    config.time_zone = 'Kolkata' # IST is represented by the "Kolkata" region in Rails
+    config.active_record.default_timezone = :local # Store time in the database in local time (IST)
 
     # Configuration for the application, engines, and railties goes here.
     #
