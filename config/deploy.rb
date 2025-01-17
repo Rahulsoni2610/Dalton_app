@@ -95,7 +95,7 @@ namespace :deploy do
     on roles(:web) do
       within release_path do
         # Compile assets
-        # execute :bundle, 'exec rake assets:precompile --trace RAILS_ENV=production'
+        execute :bundle, 'exec rake assets:precompile --trace RAILS_ENV=production'
         # Run database migrations
         execute :bundle, 'exec rake db:migrate --trace RAILS_ENV=production'
       end
