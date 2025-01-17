@@ -53,16 +53,14 @@ group :development, :test do
 end
 
 group :development do
-  gem 'capistrano', '~> 3.19.2'
-  gem 'sshkit', '~> 1.21'
+  gem 'capistrano'
+  gem 'sshkit'
   gem 'capistrano3-nginx'
   gem 'capistrano3-puma', '~> 1.2.1'
-  gem 'capistrano-asdf'
   gem 'capistrano-bundler', '~> 2.1.0', require: false
   gem 'capistrano-rails', '~> 1.6.3'
   gem 'capistrano-rails-collection'
   gem 'capistrano-rvm'
-  gem 'capistrano-sidekiq', '~> 2.3.1'
   gem "web-console"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]

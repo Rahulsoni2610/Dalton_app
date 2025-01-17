@@ -1,7 +1,6 @@
 require 'capistrano/setup'
 require 'capistrano/deploy'
 require 'capistrano/rails'
-require 'capistrano/asdf'
 require 'capistrano/bundler'
 require 'capistrano/rails/migrations'
 require 'capistrano/rails/assets'

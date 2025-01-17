@@ -100,10 +100,9 @@ GEM
       font-awesome-sass (~> 6.0)
     base64 (0.2.0)
     bcrypt (3.1.20)
-    bcrypt_pbkdf (1.1.1)
     bcrypt_pbkdf (1.1.1-arm64-darwin)
     benchmark (0.4.0)
-    bigdecimal (3.1.8)
+    bigdecimal (3.1.9)
     bindex (0.8.1)
     bootsnap (1.18.4)
       msgpack (~> 1.2)
@@ -113,9 +112,6 @@ GEM
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
-    capistrano-asdf (1.1.1)
-      capistrano (~> 3.0)
-      sshkit (~> 1.2)
     capistrano-bundler (2.1.1)
       capistrano (~> 3.1)
     capistrano-rails (1.6.3)
@@ -126,10 +122,6 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    capistrano-sidekiq (2.3.1)
-      capistrano (>= 3.9.0)
-      capistrano-bundler
-      sidekiq (>= 6.0)
     capistrano3-nginx (3.0.4)
       capistrano (~> 3.0)
     capistrano3-puma (1.2.1)
@@ -144,8 +136,8 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    concurrent-ruby (1.3.4)
-    connection_pool (2.4.1)
+    concurrent-ruby (1.3.5)
+    connection_pool (2.5.0)
     crass (1.0.6)
     csv (3.3.2)
     date (3.4.1)
@@ -161,9 +153,7 @@ GEM
     drb (2.2.1)
     ed25519 (1.3.0)
     erubi (1.13.1)
-    ffi (1.17.0-aarch64-linux-gnu)
-    ffi (1.17.0-arm64-darwin)
-    ffi (1.17.0-x86_64-linux-gnu)
+    ffi (1.17.1-arm64-darwin)
     font-awesome-sass (6.7.2)
       sassc (~> 2.0)
     formtastic (5.0.0)
@@ -208,8 +198,8 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
-    logger (1.6.4)
-    loofah (2.23.1)
+    logger (1.6.5)
+    loofah (2.24.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
     mail (2.8.1)
@@ -223,7 +213,7 @@ GEM
     minitest (5.25.4)
     msgpack (1.7.5)
     mutex_m (0.3.0)
-    net-imap (0.5.3)
+    net-imap (0.5.5)
       date
       net-protocol
     net-pop (0.1.2)
@@ -238,11 +228,7 @@ GEM
       net-protocol
     net-ssh (7.3.0)
     nio4r (2.7.4)
-    nokogiri (1.17.2-aarch64-linux)
-      racc (~> 1.4)
-    nokogiri (1.17.2-arm64-darwin)
-      racc (~> 1.4)
-    nokogiri (1.17.2-x86_64-linux)
+    nokogiri (1.18.1-arm64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     ostruct (0.6.1)
@@ -255,9 +241,10 @@ GEM
       nio4r (~> 2.0)
     racc (1.8.1)
     rack (3.1.8)
-    rack-session (2.0.0)
+    rack-session (2.1.0)
+      base64 (>= 0.1.0)
       rack (>= 3.0.0)
-    rack-test (2.1.0)
+    rack-test (2.2.0)
       rack (>= 1.3)
     rackup (2.2.1)
       rack (>= 3)
@@ -295,11 +282,9 @@ GEM
       activerecord (>= 6.1.5)
       activesupport (>= 6.1.5)
       i18n
-    rdoc (6.10.0)
+    rdoc (6.11.0)
       psych (>= 4.0.0)
-    redis-client (0.23.1)
-      connection_pool
-    regexp_parser (2.9.3)
+    regexp_parser (2.10.0)
     reline (0.6.0)
       io-console (~> 0.5)
     responders (3.1.1)
@@ -307,7 +292,7 @@ GEM
       railties (>= 5.2)
     rexml (3.4.0)
     ruby2_keywords (0.0.5)
-    rubyzip (2.3.2)
+    rubyzip (2.4.1)
     sassc (2.4.0)
       ffi (~> 1.9)
     sassc-rails (2.1.2)
@@ -323,11 +308,6 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
-    sidekiq (7.3.7)
-      connection_pool (>= 2.3.0)
-      logger
-      rack (>= 2.2.4)
-      redis-client (>= 0.22.2)
     sprockets (4.2.1)
       concurrent-ruby (~> 1.0)
       rack (>= 2.2.4, < 4)
@@ -344,14 +324,12 @@ GEM
     stimulus-rails (1.3.4)
       railties (>= 6.0.0)
     stringio (3.1.2)
-    tailwindcss-rails (3.0.0)
+    tailwindcss-rails (3.2.0)
       railties (>= 7.0.0)
       tailwindcss-ruby
-    tailwindcss-ruby (3.4.17-aarch64-linux)
     tailwindcss-ruby (3.4.17-arm64-darwin)
-    tailwindcss-ruby (3.4.17-x86_64-linux)
     thor (1.3.2)
-    tilt (2.5.0)
+    tilt (2.6.0)
     timeout (0.4.3)
     turbo-rails (2.0.11)
       actionpack (>= 6.0.0)
@@ -366,7 +344,8 @@ GEM
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
     websocket (1.2.11)
-    websocket-driver (0.7.6)
+    websocket-driver (0.7.7)
+      base64
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     xpath (3.2.0)
@@ -374,22 +353,18 @@ GEM
     zeitwerk (2.7.1)
 
 PLATFORMS
-  aarch64-linux
   arm64-darwin-23
-  x86_64-linux
 
 DEPENDENCIES
   activeadmin
   arctic_admin
   bcrypt_pbkdf (>= 1.0, < 2.0)
   bootsnap
-  capistrano (~> 3.19.2)
-  capistrano-asdf
+  capistrano
   capistrano-bundler (~> 2.1.0)
   capistrano-rails (~> 1.6.3)
   capistrano-rails-collection
   capistrano-rvm
-  capistrano-sidekiq (~> 2.3.1)
   capistrano3-nginx
   capistrano3-puma (~> 1.2.1)
   capybara
@@ -404,7 +379,7 @@ DEPENDENCIES
   sassc-rails
   selenium-webdriver
   sprockets-rails
-  sshkit (~> 1.21)
+  sshkit
   stimulus-rails
   tailwindcss-rails
   turbo-rails
