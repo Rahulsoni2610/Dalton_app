@@ -9,6 +9,7 @@ require 'capistrano/puma'
 require 'capistrano/puma/nginx'
 require 'capistrano/rails/collection'
 require 'capistrano/scm/git'
+require 'capistrano/rbenv'
 install_plugin Capistrano::SCM::Git
 
 Dir.glob('lib/capistrano/tasks/*.rake').each { |r| import r }

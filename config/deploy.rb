@@ -15,8 +15,10 @@ set :use_sudo,        true
 
 
 # set :asdf_custom_path, '~/.my_asdf_installation_path'
-set :asdf_tools, %w{ ruby 3.2.2}
-set :asdf_map_ruby_bins, %w{ bundle gem }
+set :rbenv_type, :user # Use :user if rbenv is installed in the home directory
+set :rbenv_ruby, '3.2.2' # Replace with the Ruby version you want to use
+set :rbenv_path, '/home/ubuntu/.rbenv' # Path where rbenv is installed
+set :rbenv_roles, :all # Default role to apply rbenv
 set :default_environment, { 'PATH' => "#{shared_path}/asdf-wrapper" }
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 set :puma_bind,       "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.sock"
