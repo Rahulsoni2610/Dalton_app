@@ -1,6 +1,6 @@
 require 'puma/daemon'
 # Change the binding to use only a UNIX socket
-bind 'unix:///home/ubuntu/apps/restaurant/shared/tmp/sockets/restaurant-puma.sock'
+bind 'unix:///home/ubuntu/apps/dalton/shared/tmp/sockets/dalton-puma.sock'
 
 # Optional: remove the TCP binding if it exists
 # Uncomment this if you had TCP binding before:

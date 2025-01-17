@@ -2,9 +2,6 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: postgres
-  password: postgres
-  host: localhost
 
 development:
   <<: *default
@@ -15,7 +12,10 @@ test:
   database: dalton_app_test
 
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: dalton_app_production
-  username: dalton_user
-  password: <%= ENV['DALTON_APP_DATABASE_PASSWORD'] %>
+  pool: 5
+  username: dalton
+  password: root
+  port: 5432 # default PostgreSQL port

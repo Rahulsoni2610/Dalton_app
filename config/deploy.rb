@@ -19,7 +19,6 @@ set :rbenv_type, :user # Use :user if rbenv is installed in the home directory
 set :rbenv_ruby, '3.2.2' # Replace with the Ruby version you want to use
 set :rbenv_path, '/home/ubuntu/.rbenv' # Path where rbenv is installed
 set :rbenv_roles, :all # Default role to apply rbenv
-set :default_environment, { 'PATH' => "#{shared_path}/asdf-wrapper" }
 set :deploy_to,       "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 set :puma_bind,       "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.sock"
 set :puma_state,      "#{shared_path}/tmp/pids/puma.state"
@@ -95,8 +94,10 @@ namespace :deploy do
   task :yarn_install do
     on roles(:web) do
       within release_path do
-        execute("cd #{release_path} && /home/ubuntu/apps/restaurant/shared/asdf-wrapper bundle exec rake assets:precompile --trace RAILS_ENV=production")
-        execute("cd #{release_path} && /home/ubuntu/apps/restaurant/shared/asdf-wrapper bundle exec rake db:migrate --trace RAILS_ENV=production")
+        # Compile assets
+        # execute :bundle, 'exec rake assets:precompile --trace RAILS_ENV=production'
+        # Run database migrations
+        execute :bundle, 'exec rake db:migrate --trace RAILS_ENV=production'
       end
     end
   end
