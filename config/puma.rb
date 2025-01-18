@@ -18,4 +18,4 @@ on_worker_boot do
   ActiveRecord::Base.establish_connection if defined?(ActiveRecord)
 end
 
-# daemonize
+daemonize
