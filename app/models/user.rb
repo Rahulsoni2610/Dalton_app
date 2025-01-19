@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable, :trackable,
          :timeoutable
 
-  has_many :captchas
+  has_many :captchas, dependent: :destroy
 
   validates :username, presence: true, uniqueness: true, length: { in: 4..20 }
   validates :username, format: { with: /\A[a-zA-Z0-9_]+\z/, message: "only allows letters, numbers, and underscores" }

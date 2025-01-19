@@ -93,7 +93,7 @@ ActiveAdmin.register User do
       @user = User.new(permitted_params[:user])
 
       if @user.save
-        UserMailer.send_credentials(@user, entered_password).deliver_later
+        UserMailer.send_credentials(@user, entered_password).deliver_now
 
         redirect_to admin_users_path, notice: 'User created successfully. Credentials have been sent to their email.'
       else

@@ -17,7 +17,7 @@ module DaltonApp
     config.autoload_lib(ignore: %w(assets tasks))
     config.time_zone = 'Kolkata' # IST is represented by the "Kolkata" region in Rails
     config.active_record.default_timezone = :local # Store time in the database in local time (IST)
-    config.active_job.queue_adapter = :async
+    # config.active_job.queue_adapter = :async
 
     # Configuration for the application, engines, and railties goes here.
     #
