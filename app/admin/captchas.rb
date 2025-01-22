@@ -4,6 +4,16 @@ ActiveAdmin.register Captcha do
   # Permit the attributes for assignment
   permit_params :captcha_text, :user_input, :is_correct, :user_id
 
+  collection_action :delete_all_captchas, method: :delete do
+    Captcha.delete_all
+    redirect_to admin_captchas_path, alert: "All captchas have been deleted."
+  end
+
+  # Adding a custom button to trigger the action
+  action_item :delete_all_captchas, only: :index do
+    link_to "Delete All Captchas", delete_all_captchas_admin_captchas_path, method: :delete, data: { confirm: "Are you sure you want to delete all captchas?" }
+  end
+
   # Customize the index page
   index do
     selectable_column
@@ -43,5 +53,17 @@ ActiveAdmin.register Captcha do
       f.input :is_correct
     end
     f.actions
+  end
+
+  csv do
+    column :id
+    column :captcha_text
+    column :user_input
+    column :is_correct
+    column "User Name" do |captcha|
+      captcha.user.username
+    end
+    column :created_at
+    column :updated_at
   end
 end
