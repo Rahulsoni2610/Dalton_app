@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
   connect() {
-    let time = 15;
+    let time = 13;
     const timerElement = document.getElementById('time');
     const form = document.getElementById('captcha-form');
 
